@@ -1,1 +1,20 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
 
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract CourseCompletionNFT is ERC721, Ownable {
+
+    uint256 public nextTokenId;
+
+    constructor()
+        ERC721("Course Completion NFT", "CCNFT")
+        Ownable(msg.sender)
+    {}
+
+    function mintCertificate(address student) public onlyOwner {
+        _safeMint(student, nextTokenId);
+        nextTokenId++;
+    }
+}
