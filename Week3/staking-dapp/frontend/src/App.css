@@ -1,0 +1,30 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f4f4f4;
+}
+
+.App{
+  width:500px;
+  margin:auto;
+  margin-top:40px;
+  text-align:center;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  margin:20px;
+  border-radius:10px;
+  box-shadow:0px 0px 8px gray;
+}
+
+input{
+  width:90%;
+  padding:10px;
+  margin:10px;
+}
+
+button{
+  padding:10px 20px;
+  cursor:pointer;
+}
