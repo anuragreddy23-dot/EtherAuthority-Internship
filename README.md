@@ -1,4 +1,4 @@
-# EtherAuthority-Internship
+
 # **EtherAuthority Web3 & Blockchain Development Internship**
 
 ## **Intern Details**
