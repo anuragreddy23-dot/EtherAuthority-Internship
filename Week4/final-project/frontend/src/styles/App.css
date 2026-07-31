@@ -1,0 +1,13 @@
+ :root { font-family: Arial, Helvetica, sans-serif; color: #f7f5ff; background: #080716; }
+* { box-sizing: border-box; }
+.app-shell { position: relative; min-height: 100vh; overflow: hidden; padding: 28px; background: radial-gradient(circle at 50% -20%, #38206c 0, transparent 39%), #080716; }
+.dashboard { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; }
+.ambient-orb { position: fixed; width: 380px; height: 380px; border-radius: 50%; filter: blur(100px); opacity: .2; pointer-events: none; }
+.ambient-orb-one { top: 22%; left: -150px; background: #7c3aed; }.ambient-orb-two { right: -120px; bottom: -120px; background: #2563eb; }
+.dashboard-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 14px; margin: 26px 0; }
+.network-badge, .wallet-status { display: inline-flex; align-items: center; gap: 9px; border: 1px solid rgba(189,159,255,.18); background: rgba(255,255,255,.055); color: #d7cffe; padding: 9px 13px; border-radius: 999px; font: 500 12px monospace; }
+.status-dot, .wallet-status-dot { width: 7px; height: 7px; border-radius: 50%; background: #52e3a0; box-shadow: 0 0 0 4px rgba(82,227,160,.12); }.wallet-status-label { color: #a8a0c2; }.wallet-status strong { color: #fff; }
+.hero-panel { display: flex; justify-content: space-between; align-items: end; gap: 30px; padding: 42px; border: 1px solid rgba(187,163,255,.16); border-radius: 24px; background: linear-gradient(130deg, rgba(37,25,72,.84), rgba(15,14,37,.67)); box-shadow: 0 24px 80px rgba(0,0,0,.26); }
+.eyebrow { margin: 0 0 9px; color: #a98cf8; font: 500 11px monospace; letter-spacing: .11em; }.hero-panel h1 { margin: 0; max-width: 620px; font-size: clamp(34px,5vw,58px); line-height: 1.05; letter-spacing: -.055em; }.hero-panel h1 span { color: #bb9aff; }.hero-copy { max-width: 600px; margin: 18px 0 0; color: #b9b3cb; font-size: 15px; line-height: 1.7; }.hero-stat { display: flex; align-items: center; min-width: 250px; gap: 14px; padding: 16px; border: 1px solid rgba(255,255,255,.11); border-radius: 16px; background: rgba(255,255,255,.04); }.hero-stat-icon { display: grid; width: 37px; height: 37px; place-items: center; border-radius: 11px; color: #fff; background: linear-gradient(140deg,#8b5cf6,#4f46e5); }.hero-stat-label { display: block; margin-bottom: 3px; color: #aaa3bd; font-size: 11px; }.hero-stat strong { font-size: 12px; }
+.dashboard-footer { display: flex; justify-content: center; gap: 10px; margin: 28px 0 4px; color: #7f7895; font-size: 12px; }.footer-divider { color: #ad8dfd; }
+@media (max-width:680px) { .app-shell { padding:16px; }.dashboard-toolbar,.hero-panel { align-items:flex-start; flex-direction:column; }.hero-panel { padding:27px; }.hero-stat { min-width:0; width:100%; } }
