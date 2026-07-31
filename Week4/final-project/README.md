@@ -613,11 +613,7 @@ Sreenidhi Institute of Science and Technology
 
 EtherAuthority Web3 Internship
 
-GitHub:
-
-```
-https://github.com/anuragreddy23-dot
-```
+GitHub: https://github.com/anuragreddy23-dot
 
 LinkedIn:
 
