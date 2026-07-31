@@ -1,71 +1,92 @@
 # 🚀 Token Vesting System
 
-A decentralized **Token Vesting System** built using **Solidity, Hardhat, React, Ethers.js, and MetaMask**. This DApp enables administrators to create secure token vesting schedules while allowing beneficiaries to claim vested tokens over time.
+<div align="center">
+
+![Solidity](https://img.shields.io/badge/Solidity-0.8.24-blue.svg)
+![Hardhat](https://img.shields.io/badge/Hardhat-Framework-yellow.svg)
+![React](https://img.shields.io/badge/React-Frontend-61DAFB.svg)
+![Ethers.js](https://img.shields.io/badge/Ethers.js-Web3-purple.svg)
+![MetaMask](https://img.shields.io/badge/Wallet-MetaMask-orange.svg)
+![SCAI](https://img.shields.io/badge/Network-SCAI%20Mainnet-green.svg)
+![License](https://img.shields.io/badge/License-MIT-red.svg)
+
+</div>
 
 ---
 
-## 📖 Project Overview
+# 📖 Project Overview
 
-The **Token Vesting System** is a blockchain-based decentralized application (DApp) that securely manages token distribution through configurable vesting schedules.
+The **Token Vesting System** is a decentralized blockchain application (DApp) developed as part of the **EtherAuthority Web3 Internship**.
 
-Instead of distributing tokens instantly, the system releases tokens gradually according to predefined vesting parameters such as:
+The project enables secure and transparent distribution of ERC-20 tokens through configurable vesting schedules. Instead of releasing tokens immediately, the system locks tokens and gradually releases them over time based on predefined vesting conditions.
 
-- Vesting Amount
-- Cliff Period
-- Vesting Duration
+The application consists of Solidity smart contracts deployed on the **SCAI Mainnet**, a React frontend integrated with **Ethers.js**, and MetaMask wallet connectivity.
 
-This approach ensures secure and transparent token distribution while preventing immediate token dumping.
+---
+
+# 🎯 Objectives
+
+- Develop secure Solidity smart contracts.
+- Integrate React frontend with Web3.
+- Connect MetaMask wallet.
+- Deploy contracts on SCAI Mainnet.
+- Perform unit testing.
+- Implement security validations.
+- Optimize gas usage.
+- Build a complete decentralized application.
 
 ---
 
 # ✨ Features
 
-- 🔐 Secure ERC-20 Token Contract
-- 📅 Create Custom Vesting Schedules
-- ⏳ Cliff & Linear Vesting Support
+- 🔐 ERC20 Vesting Token
+- 📅 Create Vesting Schedule
+- ⏳ Cliff-based Vesting
+- 📈 Linear Token Release
 - 💰 Claim Vested Tokens
 - 👛 MetaMask Wallet Integration
 - ⚡ React + Ethers.js Frontend
 - 🌐 SCAI Mainnet Deployment
-- 🧪 Hardhat Unit Testing
-- 🔒 Ownership Protection using OpenZeppelin Ownable
+- 🧪 Hardhat Testing
+- 🔒 OpenZeppelin Security
 - 📊 Real-Time Vesting Information
 
 ---
 
 # 🛠 Technology Stack
 
-### Smart Contracts
+## Smart Contracts
 
 - Solidity ^0.8.24
 - OpenZeppelin Contracts
 
-### Development
+## Blockchain
+
+- SecureChain AI (SCAI) Mainnet
+
+## Development
 
 - Hardhat
-- Ethers.js
 - Node.js
+- npm
 
-### Frontend
+## Frontend
 
 - React.js
 - Vite
 - JavaScript
 - CSS
 
-### Wallet
+## Web3
 
+- Ethers.js
 - MetaMask
-
-### Blockchain
-
-- SecureChain AI (SCAI) Mainnet
 
 ---
 
 # 📂 Project Structure
 
-```
+```text
 Week4/
 │
 ├── contracts/
@@ -81,13 +102,20 @@ Week4/
 ├── frontend/
 │   ├── public/
 │   ├── src/
-│   │   ├── components/
-│   │   ├── contracts/
-│   │   ├── App.jsx
-│   │   └── main.jsx
 │   │
-│   ├── package.json
-│   └── vite.config.js
+│   ├── components/
+│   │   ├── WalletConnect.jsx
+│   │   ├── CreateVesting.jsx
+│   │   ├── ClaimTokens.jsx
+│   │   ├── VestingInfo.jsx
+│   │   └── Navbar.jsx
+│   │
+│   ├── contracts/
+│   │   ├── abi.js
+│   │   └── addresses.js
+│   │
+│   ├── App.jsx
+│   └── main.jsx
 │
 ├── hardhat.config.js
 ├── package.json
@@ -96,55 +124,106 @@ Week4/
 
 ---
 
-# ⚙️ Smart Contract Architecture
+# 🏗 Project Architecture
 
-## VestingToken.sol
-
-ERC-20 token contract used for vesting.
-
-### Features
-
-- Mint Tokens
-- ERC20 Standard
-- Owner Restricted Minting
+```text
+                User
+                  │
+                  ▼
+        React Frontend (Vite)
+                  │
+                  ▼
+              Ethers.js
+                  │
+                  ▼
+             MetaMask Wallet
+                  │
+                  ▼
+        SecureChain AI Mainnet
+                  │
+        ┌─────────┴─────────┐
+        ▼                   ▼
+TokenVesting.sol     VestingToken.sol
+```
 
 ---
 
-## TokenVesting.sol
+# ⚙ Smart Contract Development
 
-Main vesting contract responsible for token distribution.
+Two Solidity smart contracts were developed.
+
+## 1️⃣ VestingToken.sol
+
+ERC20 token contract responsible for creating and managing vesting tokens.
+
+### Features
+
+- ERC20 Standard Token
+- Mint Tokens
+- Owner Controlled Minting
+- OpenZeppelin ERC20
+- Ownable Access Control
+
+---
+
+## 2️⃣ TokenVesting.sol
+
+Main vesting smart contract.
 
 ### Features
 
 - Create Vesting Schedule
-- Store Beneficiary Information
+- Store Beneficiary Details
 - Linear Vesting Calculation
+- Cliff Period
 - Claim Vested Tokens
-- Owner Controlled Schedule Creation
+- Owner-only Schedule Creation
 
 ---
 
-# 👛 Wallet Integration
+# 💻 Frontend Integration (React + Web3)
 
-The frontend integrates with **MetaMask** using **Ethers.js**.
+The frontend was developed using **React.js** and **Ethers.js** to interact with the deployed smart contracts.
 
-Users can
+### Functionalities
 
-- Connect Wallet
+- Connect MetaMask Wallet
 - Create Vesting Schedule
 - Claim Tokens
-- View Vesting Details
+- Display Vesting Information
+- Real-Time Blockchain Interaction
 
 ---
 
-# 🌐 Blockchain Integration
+# 👛 Wallet Connection Integration
 
-The project is deployed on **SecureChain AI (SCAI) Mainnet**.
+The DApp integrates MetaMask for blockchain interaction.
 
-### Network
+### Supported Features
 
-- Chain ID: **34**
-- Currency: **SCAI**
+- Connect Wallet
+- Detect Connected Account
+- Transaction Signing
+- Smart Contract Interaction
+- Network Detection
+
+---
+
+# 🌐 Blockchain Network Integration
+
+The application is deployed on **SecureChain AI (SCAI) Mainnet**.
+
+### Network Details
+
+- Network: SecureChain AI Mainnet
+- Chain ID: 34
+- Currency: SCAI
+
+### Integrated Using
+
+- Ethers.js
+- MetaMask
+- Solidity Smart Contracts
 
 ---
 
@@ -152,139 +231,14 @@ The project is deployed on **SecureChain AI (SCAI) Mainnet**.
 
 ## VestingToken
 
-```
+```text
 0x92FF117C1E2E1a0273d03408Fc65310f184B3699
 ```
 
 ## TokenVesting
 
-```
+```text
 0xa7bE545ca629a3cE6A79c4b121025d18B19f6D01
-```
-
----
-
-# 🧪 Testing
-
-Smart contracts were tested using **Hardhat**.
-
-### Test Cases
-
-- ✅ Contract Deployment
-- ✅ Create Vesting Schedule
-- ✅ Claim Tokens
-- ✅ Reject Claim Before Cliff
-- ✅ Token Transfer Validation
-
-Run tests:
-
-```bash
-npx hardhat test
-```
-
----
-
-# 🔒 Security & Edge-Case Testing
-
-The following security scenarios were tested:
-
-- ✅ Only owner can create vesting schedules
-- ✅ Claim before cliff is rejected
-- ✅ Duplicate vesting schedules are prevented
-- ✅ Zero token amount validation
-- ✅ Invalid beneficiary validation
-- ✅ Token balance verification
-- ✅ Safe ERC20 token transfers
-- ✅ Ownership protection using OpenZeppelin
-
----
-
-# ⛽ Gas Optimization
-
-Several optimizations were implemented to reduce gas consumption.
-
-- Solidity v0.8.24 built-in overflow protection
-- OpenZeppelin audited contracts
-- Efficient storage usage
-- Mapping-based vesting lookup
-- Minimal state changes
-- Constructor initialization
-- Optimized token transfer logic
-
----
-
-# 🚀 Deployment
-
-## Deploy Contracts
-
-```bash
-npx hardhat compile
-
-npx hardhat run scripts/deploy.js --network scai
-```
-
----
-
-## Run Frontend
-
-```bash
-cd frontend
-
-npm install
-
-npm run dev
-```
-
----
-
-# 📷 Project Screenshots
-
-## Home Page
-
-_Add Screenshot_
-
----
-
-## Wallet Connected
-
-_Add Screenshot_
-
----
-
-## Create Vesting Schedule
-
-_Add Screenshot_
-
----
-
-## Claim Tokens
-
-_Add Screenshot_
-
----
-
-## Vesting Information
-
-_Add Screenshot_
-
----
-
-# 🎥 Demo Video
-
-Demo Video Link
-
-```
-Add your video link here
-```
-
----
-
-# 🌍 Live Demo
-
-Vercel Deployment
-
-```
-Add your Vercel Link here
 ```
 
 ---
@@ -294,7 +248,7 @@ Add your Vercel Link here
 Clone Repository
 
 ```bash
-git clone https://github.com/your-username/EtherAuthority-Internship.git
+git clone https://github.com/YOUR_USERNAME/EtherAuthority-Internship.git
 ```
 
 Install Dependencies
@@ -327,33 +281,30 @@ npm run dev
 
 ---
 
-# 🔮 Future Improvements
+# ▶ Running the Project
 
-- Multiple Vesting Schedules per User
-- Revocable Vesting
-- Monthly Unlock Mechanism
-- Token Dashboard
-- Admin Analytics
-- Event History
-- WalletConnect Support
-- Mobile Responsive UI
+### Start Hardhat
 
----
+```bash
+npx hardhat compile
+```
 
-# 👨‍💻 Author
+### Deploy Contracts
 
-**Mothe Anurag Reddy**
+```bash
+npx hardhat run scripts/deploy.js --network scai
+```
 
-B.Tech Computer Science & Engineering
+### Start React Application
 
-Sreenidhi Institute of Science & Technology
+```bash
+cd frontend
 
-EtherAuthority Web3 Internship
+npm run dev
+```
 
-GitHub: https://github.com/YOUR_GITHUB_USERNAME
+Open:
 
----
-
-# 📄 License
-
-This project is developed for educational purposes as part of the **EtherAuthority Web3 Internship Program**.
+```
+http://localhost:5173
+```
