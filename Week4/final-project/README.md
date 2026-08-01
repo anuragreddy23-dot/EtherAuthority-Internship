@@ -615,11 +615,7 @@ EtherAuthority Web3 Internship
 
 GitHub: https://github.com/anuragreddy23-dot
 
-LinkedIn:
-
-```
-linkedin.com/in/anuragreddy-mothe-21a699329
-```
+LinkedIn: linkedin.com/in/anuragreddy-mothe-21a699329 
 
 ---
 
