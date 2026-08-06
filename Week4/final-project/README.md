@@ -383,17 +383,24 @@ Several optimizations were implemented to improve contract performance and reduc
 
 ---
 
-# 🚀 Mainnet Deployment
+# 🚀 Sepolia Deployment
 
-The smart contracts were successfully deployed on the **SecureChain AI (SCAI) Mainnet**.
+The smart contracts were successfully deployed on the **Ethereum Sepolia Testnet**.
 
 ### Network Details
 
 | Property | Value |
 |----------|-------|
-| Network | SecureChain AI Mainnet |
-| Chain ID | 34 |
-| Currency | SCAI |
+| Network | Ethereum Sepolia Testnet |
+| Chain ID | 11155111 |
+| Currency | SepoliaETH |
+
+### Deployed Contracts
+
+| Contract | Address |
+|----------|---------|
+| VestingToken | `0xfa48b927A62975837317e2e184Cc27C3Ef5Cd181` |
+| TokenVesting | `0xbc7302993385A2914Fd0c11aA5d0758638639222` |
 
 ---
 
