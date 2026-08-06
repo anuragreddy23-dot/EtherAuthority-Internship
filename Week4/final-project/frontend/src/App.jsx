@@ -31,34 +31,36 @@ function App() {
       <section className="dashboard">
         <Navbar />
 
-        <div className="dashboard-toolbar">
-          <div className="network-badge">
-            <span className="status-dot" />
-            SCAI Mainnet
-          </div>
-          <WalletConnect
-            provider={provider}
-            account={account}
-            setProvider={setProvider}
-            setSigner={setSigner}
-            setAccount={setAccount}
-          />
+        <div className="network-badge">
+          <span className="status-dot"></span>
+          Ethereum Sepolia Testnet
         </div>
+
+        <WalletConnect
+          provider={provider}
+          account={account}
+          setProvider={setProvider}
+          setSigner={setSigner}
+          setAccount={setAccount}
+        />
 
         <section className="hero-panel">
           <div>
             <p className="eyebrow">DECENTRALIZED TOKEN MANAGEMENT</p>
-            <h1>Vesting, made <span>transparent.</span></h1>
+            <h1>
+              Vesting, made <span>transparent.</span>
+            </h1>
             <p className="hero-copy">
-              Create token allocations, apply a cliff, and let beneficiaries claim
-              their tokens securely over time.
+              Create token allocations, apply a cliff, and let beneficiaries
+              claim their tokens securely over time.
             </p>
           </div>
+
           <div className="hero-stat">
             <span className="hero-stat-icon">◈</span>
             <div>
-              <span className="hero-stat-label">Network ready</span>
-              <strong>Smart contracts connected</strong>
+              <span className="hero-stat-label">Network Ready</span>
+              <strong>Smart Contracts Connected</strong>
             </div>
           </div>
         </section>
@@ -67,11 +69,13 @@ function App() {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              className={`tab-button ${activeTab === tab.id ? "is-active" : ""}`}
+              className={`tab-button ${
+                activeTab === tab.id ? "is-active" : ""
+              }`}
               onClick={() => setActiveTab(tab.id)}
               type="button"
             >
-              <span>{tab.icon}</span>{tab.label}
+              <span>{tab.icon}</span> {tab.label}
             </button>
           ))}
         </nav>
@@ -83,7 +87,7 @@ function App() {
         </section>
 
         <footer className="dashboard-footer">
-          <span>Powered by SecureChain AI</span>
+          <span>Powered by Ethereum Sepolia</span>
           <span className="footer-divider">•</span>
           <span>Built for EtherAuthority</span>
         </footer>
