@@ -232,13 +232,13 @@ The application is deployed on **SecureChain AI (SCAI) Mainnet**.
 ## VestingToken
 
 ```text
-0x92FF117C1E2E1a0273d03408Fc65310f184B3699
+0xbc7302993385A2914Fd0c11aA5d0758638639222
 ```
 
 ## TokenVesting
 
 ```text
-0xa7bE545ca629a3cE6A79c4b121025d18B19f6D01
+0xfa48b927A62975837317e2e184Cc27C3Ef5Cd181
 ```
 
 ---
@@ -404,13 +404,13 @@ The smart contracts were successfully deployed on the **SecureChain AI (SCAI) Ma
 #### VestingToken
 
 ```text
-0x92FF117C1E2E1a0273d03408Fc65310f184B3699
+0xbc7302993385A2914Fd0c11aA5d0758638639222
 ```
 
 #### TokenVesting
 
 ```text
-0xa7bE545ca629a3cE6A79c4b121025d18B19f6D01
+0xfa48b927A62975837317e2e184Cc27C3Ef5Cd181
 ```
 
 ---
@@ -422,7 +422,7 @@ The frontend application is deployed using **Vercel**.
 ### Live URL
 
 ```text
-https://YOUR-PROJECT.vercel.app
+https://ether-authority-internship-p2b1.vercel.app/
 ```
 
 
