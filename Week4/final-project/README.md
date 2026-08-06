@@ -421,9 +421,7 @@ The frontend application is deployed using **Vercel**.
 
 ### Live URL
 
-```text
-https://ether-authority-internship-p2b1.vercel.app/
-```
+https://ether-authority-internship-p2b1.vercel.app
 
 
 ---
@@ -468,13 +466,9 @@ Store all screenshots inside it.
 
 ## 🏠 Home Page
 
-```
 docs/screenshots/home.png
-```
 
-```md
-![Home](docs/screenshots/home.png)
-```
+(docs/screenshots/home.png)
 
 ---
 
