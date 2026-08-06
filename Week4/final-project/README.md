@@ -556,10 +556,7 @@ Record a short demo covering:
 - Successful Transaction
 
 ### Demo Video Link
-
-```text
-https://YOUR_VIDEO_LINK
-```
+https://drive.google.com/file/d/11iuURCpSAuaMwJ_yjI7ebPNUKi_ARASq/view?usp=sharing
 
 ---
 
